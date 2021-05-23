@@ -21,7 +21,7 @@
     "**/*.spec.ts"
   ],
   "include": [
-    "**\\*.ts",
+    "**/*.ts",
     "..\\..\\health-department\\domain\\src\\lib\\directives\\is-health-department-user.directive.spec.ts",
     "..\\..\\health-department\\domain\\src\\lib\\directives\\is-health-department-user.directive.ts",
     "..\\..\\administration\\domain\\src\\lib\\directives\\is-admin.directive.ts",

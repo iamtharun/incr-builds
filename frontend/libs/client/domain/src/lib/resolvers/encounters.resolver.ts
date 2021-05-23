@@ -1,8 +1,8 @@
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
-import { EncounterEntry } from '@qro/client/domain';
 import { EnrollmentService } from '../data-access/enrollment.service';
+import { EncounterEntry } from '../model/encounter';
 
 @Injectable()
 export class EncountersResolver implements Resolve<EncounterEntry[]> {

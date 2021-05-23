@@ -17,5 +17,5 @@ module.exports = {
       ],
     },
   },
-  displayName: 'general-shell',
+  displayName: 'general/shell',
 };

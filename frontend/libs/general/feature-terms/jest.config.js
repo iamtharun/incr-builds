@@ -17,5 +17,5 @@ module.exports = {
       ],
     },
   },
-  displayName: 'general-feature-terms',
+  displayName: 'general/feature-terms',
 };

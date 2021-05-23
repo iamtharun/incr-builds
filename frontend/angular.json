@@ -13,7 +13,9 @@
       "prefix": "qro",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "--builder": "@angular-devkit/build-angular:browser",
+          "builder": "@nrwl/angular:webpack-browser",
+
           "options": {
             "allowedCommonJsDependencies": [
               "file-saver",
@@ -40,7 +42,7 @@
             "scripts": []
           },
           "configurations": {
-            "mannheim-prod": {
+            "production": {
               "fileReplacements": [
                 {
                   "replace": "apps/quarano-frontend/src/environments/environment.ts",
@@ -439,6 +441,18 @@
           "outputs": [
             "coverage/libs/shared/ui-material"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-material/tsconfig.lib.json",
+            "project": "libs/shared/ui-material/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-material/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -475,6 +489,18 @@
           "outputs": [
             "coverage/libs/health-department/domain"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/health-department/domain/tsconfig.lib.json",
+            "project": "libs/health-department/domain/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/health-department/domain/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -511,6 +537,18 @@
           "outputs": [
             "coverage/libs/health-department/ui-action-alert"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/health-department/ui-action-alert/tsconfig.lib.json",
+            "project": "libs/health-department/ui-action-alert/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/health-department/ui-action-alert/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -547,6 +585,18 @@
           "outputs": [
             "coverage/libs/health-department/shell"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/health-department/shell/tsconfig.lib.json",
+            "project": "libs/health-department/shell/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/health-department/shell/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -583,6 +633,18 @@
           "outputs": [
             "coverage/libs/shared/ui-tile"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-tile/tsconfig.lib.json",
+            "project": "libs/shared/ui-tile/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-tile/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -619,6 +681,18 @@
           "outputs": [
             "coverage/libs/shared/ui-button"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-button/tsconfig.lib.json",
+            "project": "libs/shared/ui-button/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-button/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -655,6 +729,18 @@
           "outputs": [
             "coverage/libs/administration/shell"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/administration/shell/tsconfig.lib.json",
+            "project": "libs/administration/shell/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/administration/shell/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -691,6 +777,18 @@
           "outputs": [
             "coverage/libs/auth/api"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/auth/api/tsconfig.lib.json",
+            "project": "libs/auth/api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/auth/api/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -727,6 +825,18 @@
           "outputs": [
             "coverage/libs/shared/ui-confirmation-dialog"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-confirmation-dialog/tsconfig.lib.json",
+            "project": "libs/shared/ui-confirmation-dialog/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-confirmation-dialog/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -763,6 +873,18 @@
           "outputs": [
             "coverage/libs/shared/ui-multiple-autocomplete"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-multiple-autocomplete/tsconfig.lib.json",
+            "project": "libs/shared/ui-multiple-autocomplete/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-multiple-autocomplete/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -799,6 +921,18 @@
           "outputs": [
             "coverage/libs/auth/shell"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/auth/shell/tsconfig.lib.json",
+            "project": "libs/auth/shell/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/auth/shell/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -835,6 +969,18 @@
           "outputs": [
             "coverage/libs/administration/domain"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/administration/domain/tsconfig.lib.json",
+            "project": "libs/administration/domain/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/administration/domain/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -871,6 +1017,18 @@
           "outputs": [
             "coverage/libs/administration/api"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/administration/api/tsconfig.lib.json",
+            "project": "libs/administration/api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/administration/api/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -907,6 +1065,18 @@
           "outputs": [
             "coverage/libs/health-department/api"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/health-department/api/tsconfig.lib.json",
+            "project": "libs/health-department/api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/health-department/api/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -943,6 +1113,18 @@
           "outputs": [
             "coverage/libs/auth/forbidden"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/auth/forbidden/tsconfig.lib.json",
+            "project": "libs/auth/forbidden/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/auth/forbidden/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -979,6 +1161,18 @@
           "outputs": [
             "coverage/libs/shared/util-progress-bar"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/util-progress-bar/tsconfig.lib.json",
+            "project": "libs/shared/util-progress-bar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-progress-bar/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1015,6 +1209,18 @@
           "outputs": [
             "coverage/libs/client/domain"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/domain/tsconfig.lib.json",
+            "project": "libs/client/domain/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/domain/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1051,6 +1257,18 @@
           "outputs": [
             "coverage/libs/shared/ui-aside"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-aside/tsconfig.lib.json",
+            "project": "libs/shared/ui-aside/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-aside/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1087,6 +1305,18 @@
           "outputs": [
             "coverage/libs/client/shell"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/shell/tsconfig.lib.json",
+            "project": "libs/client/shell/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/shell/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1123,6 +1353,18 @@
           "outputs": [
             "coverage/libs/shared/util-symptom"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/util-symptom/tsconfig.lib.json",
+            "project": "libs/shared/util-symptom/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-symptom/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1159,6 +1401,18 @@
           "outputs": [
             "coverage/libs/shared/util-data-access"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/util-data-access/tsconfig.lib.json",
+            "project": "libs/shared/util-data-access/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-data-access/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1195,6 +1449,18 @@
           "outputs": [
             "coverage/libs/client/api"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/api/tsconfig.lib.json",
+            "project": "libs/client/api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/api/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1231,6 +1497,18 @@
           "outputs": [
             "coverage/libs/shared/util-date"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/util-date/tsconfig.lib.json",
+            "project": "libs/shared/util-date/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-date/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1267,6 +1545,18 @@
           "outputs": [
             "coverage/libs/client/feature-diary"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/feature-diary/tsconfig.lib.json",
+            "project": "libs/client/feature-diary/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/feature-diary/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1303,6 +1593,18 @@
           "outputs": [
             "coverage/libs/client/feature-enrollment"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/feature-enrollment/tsconfig.lib.json",
+            "project": "libs/client/feature-enrollment/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/feature-enrollment/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1339,6 +1641,18 @@
           "outputs": [
             "coverage/libs/client/feature-profile"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/feature-profile/tsconfig.lib.json",
+            "project": "libs/client/feature-profile/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/feature-profile/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1375,6 +1689,18 @@
           "outputs": [
             "coverage/libs/client/feature-health-department-contact"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/feature-health-department-contact/tsconfig.lib.json",
+            "project": "libs/client/feature-health-department-contact/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/feature-health-department-contact/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1411,6 +1737,18 @@
           "outputs": [
             "coverage/libs/client/feature-contact-persons"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/feature-contact-persons/tsconfig.lib.json",
+            "project": "libs/client/feature-contact-persons/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/feature-contact-persons/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1447,6 +1785,18 @@
           "outputs": [
             "coverage/libs/client/ui-personal-data"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/ui-personal-data/tsconfig.lib.json",
+            "project": "libs/client/ui-personal-data/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/ui-personal-data/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1483,6 +1833,18 @@
           "outputs": [
             "coverage/libs/client/ui-contact-person-detail"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/ui-contact-person-detail/tsconfig.lib.json",
+            "project": "libs/client/ui-contact-person-detail/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/ui-contact-person-detail/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1519,6 +1881,18 @@
           "outputs": [
             "coverage/libs/health-department/feature-contact-cases"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/health-department/feature-contact-cases/tsconfig.lib.json",
+            "project": "libs/health-department/feature-contact-cases/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/health-department/feature-contact-cases/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1555,6 +1929,18 @@
           "outputs": [
             "coverage/libs/health-department/feature-index-cases"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/health-department/feature-index-cases/tsconfig.lib.json",
+            "project": "libs/health-department/feature-index-cases/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/health-department/feature-index-cases/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1591,6 +1977,18 @@
           "outputs": [
             "coverage/libs/health-department/feature-case-detail"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/health-department/feature-case-detail/tsconfig.lib.json",
+            "project": "libs/health-department/feature-case-detail/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/health-department/feature-case-detail/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1627,6 +2025,18 @@
           "outputs": [
             "coverage/libs/general/feature-welcome"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/general/feature-welcome/tsconfig.lib.json",
+            "project": "libs/general/feature-welcome/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/general/feature-welcome/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1663,6 +2073,18 @@
           "outputs": [
             "coverage/libs/general/feature-data-protection"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/general/feature-data-protection/tsconfig.lib.json",
+            "project": "libs/general/feature-data-protection/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/general/feature-data-protection/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1699,6 +2121,18 @@
           "outputs": [
             "coverage/libs/general/feature-imprint"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/general/feature-imprint/tsconfig.lib.json",
+            "project": "libs/general/feature-imprint/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/general/feature-imprint/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1735,6 +2169,18 @@
           "outputs": [
             "coverage/libs/general/feature-terms"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/general/feature-terms/tsconfig.lib.json",
+            "project": "libs/general/feature-terms/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/general/feature-terms/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1771,6 +2217,18 @@
           "outputs": [
             "coverage/libs/general/shell"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/general/shell/tsconfig.lib.json",
+            "project": "libs/general/shell/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/general/shell/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1807,6 +2265,18 @@
           "outputs": [
             "coverage/libs/administration/feature-account-detail"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/administration/feature-account-detail/tsconfig.lib.json",
+            "project": "libs/administration/feature-account-detail/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/administration/feature-account-detail/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1843,6 +2313,18 @@
           "outputs": [
             "coverage/libs/administration/feature-account-list"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/administration/feature-account-list/tsconfig.lib.json",
+            "project": "libs/administration/feature-account-list/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/administration/feature-account-list/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1879,6 +2361,18 @@
           "outputs": [
             "coverage/libs/shared/ui-error"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-error/tsconfig.lib.json",
+            "project": "libs/shared/ui-error/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-error/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1915,6 +2409,18 @@
           "outputs": [
             "coverage/libs/auth/feature-change-password"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/auth/feature-change-password/tsconfig.lib.json",
+            "project": "libs/auth/feature-change-password/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/auth/feature-change-password/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1951,6 +2457,18 @@
           "outputs": [
             "coverage/libs/auth/feature-login"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/auth/feature-login/tsconfig.lib.json",
+            "project": "libs/auth/feature-login/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/auth/feature-login/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -1987,6 +2505,18 @@
           "outputs": [
             "coverage/libs/shared/ui-styles"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-styles/tsconfig.lib.json",
+            "project": "libs/shared/ui-styles/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-styles/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2023,6 +2553,18 @@
           "outputs": [
             "coverage/libs/shared/util-forms"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/util-forms/tsconfig.lib.json",
+            "project": "libs/shared/util-forms/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-forms/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2059,6 +2601,18 @@
           "outputs": [
             "coverage/libs/shared/util-common-functions"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/util-common-functions/tsconfig.lib.json",
+            "project": "libs/shared/util-common-functions/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-common-functions/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2095,6 +2649,18 @@
           "outputs": [
             "coverage/libs/shared/util-snackbar"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/util-snackbar/tsconfig.lib.json",
+            "project": "libs/shared/util-snackbar/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-snackbar/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2131,6 +2697,18 @@
           "outputs": [
             "coverage/libs/shared/util-translation"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/util-translation/tsconfig.lib.json",
+            "project": "libs/shared/util-translation/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/util-translation/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2167,6 +2745,18 @@
           "outputs": [
             "coverage/libs/shared/ui-static-pages"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-static-pages/tsconfig.lib.json",
+            "project": "libs/shared/ui-static-pages/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-static-pages/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2203,6 +2793,18 @@
           "outputs": [
             "coverage/libs/health-department/feature-export"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/health-department/feature-export/tsconfig.lib.json",
+            "project": "libs/health-department/feature-export/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/health-department/feature-export/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2239,6 +2841,18 @@
           "outputs": [
             "coverage/libs/client/ui-forgotten-contact-dialog"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/client/ui-forgotten-contact-dialog/tsconfig.lib.json",
+            "project": "libs/client/ui-forgotten-contact-dialog/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/client/ui-forgotten-contact-dialog/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2275,6 +2889,18 @@
           "outputs": [
             "coverage/libs/shared/ui-ag-grid"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/shared/ui-ag-grid/tsconfig.lib.json",
+            "project": "libs/shared/ui-ag-grid/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/shared/ui-ag-grid/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2311,6 +2937,18 @@
           "outputs": [
             "coverage/libs/general/domain"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/general/domain/tsconfig.lib.json",
+            "project": "libs/general/domain/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/general/domain/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2347,6 +2985,18 @@
           "outputs": [
             "coverage/libs/general/api"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/general/api/tsconfig.lib.json",
+            "project": "libs/general/api/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/general/api/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2383,6 +3033,18 @@
           "outputs": [
             "coverage/libs/auth/feature-reset-password"
           ]
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/auth/feature-reset-password/tsconfig.lib.json",
+            "project": "libs/auth/feature-reset-password/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/auth/feature-reset-password/tsconfig.lib.prod.json"
+            }
+          }
         }
       },
       "schematics": {
@@ -2415,6 +3077,18 @@
           "options": {
             "jestConfig": "libs/health-department/ui-export-dialog/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "build": {
+          "builder": "@nrwl/angular:ng-packagr-lite",
+          "options": {
+            "tsConfig": "libs/health-department/ui-export-dialog/tsconfig.lib.json",
+            "project": "libs/health-department/ui-export-dialog/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "libs/health-department/ui-export-dialog/tsconfig.lib.prod.json"
+            }
           }
         }
       },

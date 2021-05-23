@@ -17,5 +17,5 @@ module.exports = {
       ],
     },
   },
-  displayName: 'general-feature-data-protection',
+  displayName: 'general/feature-data-protection',
 };

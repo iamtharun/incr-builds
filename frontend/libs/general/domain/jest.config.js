@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'general-domain',
+  displayName: 'general/domain',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {

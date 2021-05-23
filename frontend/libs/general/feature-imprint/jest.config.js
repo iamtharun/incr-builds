@@ -17,5 +17,5 @@ module.exports = {
       ],
     },
   },
-  displayName: 'general-feature-imprint',
+  displayName: 'general/feature-imprint',
 };

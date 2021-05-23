@@ -1,0 +1,11 @@
+{
+  "name": "@qro/client/feature-diary",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^11.0.7",
+    "@angular/core": "^11.0.7"
+  },
+  "dependencies": {
+    "tslib": "^"
+  }
+}

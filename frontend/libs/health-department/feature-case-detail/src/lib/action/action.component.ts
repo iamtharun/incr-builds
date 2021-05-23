@@ -1,4 +1,3 @@
-import { ActionDto } from './../../../../domain/src/lib/model/case-action';
 import { BadRequestService } from '@qro/shared/ui-error';
 import { ValidationErrorService, VALIDATION_PATTERNS, TrimmedPatternValidator } from '@qro/shared/util-forms';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -7,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 import { SnackbarService } from '@qro/shared/util-snackbar';
 import { ConfirmationDialogComponent } from '@qro/shared/ui-confirmation-dialog';
-import { CaseActionDto, HealthDepartmentService } from '@qro/health-department/domain';
+import { ActionDto, CaseActionDto, HealthDepartmentService } from '@qro/health-department/domain';
 import { CaseType } from '@qro/auth/api';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';

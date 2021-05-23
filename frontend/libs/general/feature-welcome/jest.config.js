@@ -17,5 +17,5 @@ module.exports = {
       ],
     },
   },
-  displayName: 'general-feature-welcome',
+  displayName: 'general/feature-welcome',
 };

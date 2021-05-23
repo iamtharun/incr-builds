@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'general-api',
+  displayName: 'general/api',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
