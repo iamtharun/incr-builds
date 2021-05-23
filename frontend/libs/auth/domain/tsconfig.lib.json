@@ -1,19 +1,25 @@
 {
-  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "../../../dist/out-tsc",
     "target": "es2015",
     "declaration": true,
+    "declarationMap": true,
     "inlineSources": true,
     "types": [],
-    "lib": ["dom", "es2018"]
+    "lib": [
+      "dom",
+      "es2018"
+    ],
+    "outDir": "../../../dist/out-tsc"
   },
   "angularCompilerOptions": {
     "skipTemplateCodegen": true,
     "strictMetadataEmit": true,
     "enableResourceInlining": true
   },
-  "exclude": ["src/test-setup.ts", "**/*.spec.ts"],
+  "exclude": [
+    "src/test-setup.ts",
+    "**/*.spec.ts"
+  ],
   "include": [
     "**\\*.ts",
     "..\\..\\health-department\\domain\\src\\lib\\directives\\is-health-department-user.directive.spec.ts",
@@ -21,5 +27,6 @@
     "..\\..\\administration\\domain\\src\\lib\\directives\\is-admin.directive.ts",
     "..\\..\\client\\enrollment\\domain\\src\\lib\\directives\\is-enrolled-client.directive.ts",
     "..\\..\\client\\enrollment\\domain\\src\\lib\\directives\\is-enrolled-client.directive.spec.ts"
-  ]
+  ],
+  "extends": "./tsconfig.json"
 }
